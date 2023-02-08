@@ -24,3 +24,67 @@ metrics = ['accuracy']
 
 # Compile the model
 model.compile(loss=loss, optimizer=optimizer, metrics=metrics)
+
+# Specify the number of training epochs
+epochs = 10
+
+# Train the model
+history = model.fit(X_train, y_train, epochs=epochs, validation_data=(X_test, y_test))
+
+# Preprocess new images
+new_images = ...
+new_images = preprocess_images(new_images)
+
+# Make predictions on new images
+predictions = model.predict(new_images)
+
+
+
+
+def move_up(self):
+    # Code to move the drone up
+    pass
+
+def move_down(self):
+    # Code to move the drone to down
+    pass
+
+
+def move_left(self):
+    # Code to move the drone to the left
+    pass
+
+def move_right(self):
+    # Code to move the drone to the right
+    pass
+
+
+def move_away_from_obstacle():
+    # Move the drone up
+    drone.move_up()
+    
+    # Wait for a short time
+    time.sleep(1)
+    
+    # Move the drone left or right randomly
+    if random.choice([True, False]):
+        drone.move_left()
+    else:
+        drone.move_right()
+
+
+
+
+
+# Use predictions to control the drone
+for prediction in predictions:
+    # Get the predicted class from the model's predictions
+    class_index = np.argmax(prediction)
+    
+    # Check if the predicted class is "obstacle"
+    if class_index == 0:
+        # Move the drone away from the obstacle
+        move_away_from_obstacle()
+    else:
+        # Continue flying normally
+        continue_flying()
