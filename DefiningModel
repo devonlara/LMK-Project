@@ -16,3 +16,11 @@ model.add(Dense(128, activation='relu'))
 
 # Add a final dense layer with the number of units equal to the number of classes and softmax activation
 model.add(Dense(num_classes, activation='softmax'))
+
+# Begin to compile the model
+loss = 'categorical_crossentropy'
+optimizer = 'adam'
+metrics = ['accuracy']
+
+# Compile the model
+model.compile(loss=loss, optimizer=optimizer, metrics=metrics)
