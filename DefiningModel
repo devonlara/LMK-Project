@@ -1,0 +1,18 @@
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Flatten, Conv2D
+
+# Define the model
+model = Sequential()
+
+# Add a 2D convolutional layer with 32 filters
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+
+# Add a flattening layer
+model.add(Flatten())
+
+# Add a dense layer with 128 units and ReLU activation
+model.add(Dense(128, activation='relu'))
+
+# Add a final dense layer with the number of units equal to the number of classes and softmax activation
+model.add(Dense(num_classes, activation='softmax'))
