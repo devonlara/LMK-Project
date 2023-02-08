@@ -14,3 +14,6 @@ for image, label in zip(images, labels):
 
 # Convert the data array to a numpy array
 data = np.array(data)
+
+# Save the data array to a file for later use in training the model
+np.save('drone_data.npy', data)
