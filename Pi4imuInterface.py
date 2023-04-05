@@ -1,3 +1,6 @@
+#This script will continuously output the GPS coordinates (latitude and longitude) received from the BerryGPS-IMU. You can use these coordinates to control your rover.
+
+
 import time
 import serial
 
