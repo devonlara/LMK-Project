@@ -1,0 +1,7 @@
+Install necessary packages
+Wire the BerryGPS-IMU to the Raspberry Pi
+Write a Python script to read GPS data
+Connect the GND pin on the BerryGPS-IMU to the GND pin (pin 6) on the Raspberry Pi.
+Connect the VCC pin on the BerryGPS-IMU to the 3.3V pin (pin 1) on the Raspberry Pi.
+Connect the TX pin on the BerryGPS-IMU to the RXD pin (pin 10, GPIO 15) on the Raspberry Pi.
+Connect the RX pin on the BerryGPS-IMU to the TXD pin (pin 8, GPIO 14) on the Raspberry Pi.
